@@ -3,7 +3,7 @@ ARRAYS usar>> [] */
 
 
 // EXEMPL0 1 > SIMPLES
-let livros = {
+let livro = {
     titulo: "O Óbvio que Ignoramos",
     ano: 2016,
     volumes:1,
@@ -11,11 +11,11 @@ let livros = {
 };
 
 // Meu livro preferido é:
-console.log("Meu livro preferido é: "+livros.titulo);
-console.log(`Meu livro preferido é: ${livros.titulo}`);
+console.log("Meu livro preferido é: "+livro.titulo);
+console.log(`Meu livro preferido é: ${livro.titulo}`);
 
-console.log(livros.autor+"  "+livros.ano);
-console.log(livros.ano);
+console.log(livro.autor+"  "+livro.ano);
+console.log(livro.ano);
 
 
 // EXEMPLO 2 > OBJETO CONTENDO ARRAY E OUTRO OBJETO
@@ -35,5 +35,31 @@ console.log(cliente.idade + " anos");
 console.log(cliente.telefones[2] );
 
 // Acessando uma propriedade que tambem é um objeto
-console.log(cliente.medidas.peso + "kg")
-console.log(cliente.medidas.altura + " cm")
+console.log(cliente.medidas.peso + "kg");
+console.log(cliente.medidas.altura + " cm");
+
+
+// aula 23/09/2023
+
+// EXEMPLO 3: Array de Objetos
+let livros = [
+
+    {
+        titulo: "Singular - O poder de ser diferente",
+        autor: "Jacob Petry"
+    },
+
+    {
+        titulo: "O Obstáculo é o Caminho",
+        autor: " Ryan Holiday"
+    },
+
+    {
+        titulo: "Roube Como Um Artista",
+        autor: "Austin Kleon"
+    }
+];
+
+// Singular (escrito por Jacob Petry) é o livro que estou lendo atualmente.
+
+console.log(`${livros[0].titulo} (escrito por ${livros[0].autor}) é o livro que estou lendo atualmente. 🥽`);
