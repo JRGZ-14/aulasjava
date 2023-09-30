@@ -18,7 +18,7 @@ Operadores Relacionais:
 != diferente
 */
 
-//Exemplo 1: condicional SIMPLES (if)
+//EXEMPLO 1: condicional SIMPLES (if)
 let numero = 14;
 
 if( numero >= 14){
@@ -28,25 +28,86 @@ if( numero >= 14){
 
 }
 
-//Exenplo 2: condicional COMPOSTA (if e else)
+//EXEMPLO 2: condicional COMPOSTA (if e else)
 
 //composta sera  a mais usada na programação
 
 let aluno = "João Ricardo";
-let nota1 = 9.14;
-let nota2 = 8.21;
-let nota3 = 7.65;
-let media = (nota1 + nota2 + nota3) /3;
-const mediaMinima = 7
-//console.log(media);
+let nota1 = 9;
+let nota2 = 2.6;
+//let nota3 = 9;
+let media = (nota1 + nota2 ) /2;
+let faltas = 0;
+
+
+const mediaMinima = 7;
+const limiteDeFaltas = 11;
+
+
 
 console.log(`Aluno(a):${aluno}`);
-console.log(`Notas: ${nota1},${nota2} e ${nota3}`);
+console.log(`Notas: ${nota1},${nota2}`);
 console.log(`Média:${media}`);
 
+let resultado; 
 
-if(media >= mediaMinima){
-    console.log("Aprovado(a)!");
+/* if(media >= mediaMinima){
+    resultado =("Aprovado(a)!");
 } else{
-    console.log("Reprovado(a)!");
+    resultado =("Reprovado(a)!");
+} */
+
+console.log(`Faltas: ${faltas}`);
+
+// &&= operador LOGICO && (E/AND)
+if(media >= mediaMinima && faltas <= limiteDeFaltas){
+    if(media >= mediaMinima)
+        resultado =("Aprovado(a)!");
+    } else{
+        resultado =("Reprovado(a)!");
 }
+
+console.log(resultado);
+
+
+//EXEMPLO 3: condicional ENCADEADA (if, else if, else)
+
+/* Desempenhos
+
+-Média menor que 3? PÉSSIMO
+-Média menor que 5? RUIM
+-Média menor que 7? REGULAR
+-Média menor que 9? BOM
+-Nenhuma das condições anteriores?EXCELENTE
+
+P.E-Média menor que 10? EXCELENTE
+
+ */
+if(media < 3){
+    console.log("PÉSSIMO 😱");
+}
+else if (media < 5) {
+    console.log("RUIM 😶");
+}
+else if(media < 7) {
+    console.log("REGULAR 😢");
+}
+else if(media < 9) {
+    console.log("BOM 🤗");
+}
+else{
+    console.log("EXCELENTE 🥳");
+}
+
+/* 
+= IGUAL UNICO =
+Serve para ATRIBUIR/COLOCAR VALOR
+
+== IGUAL DUPLO ==
+Serve para COMPARAR VALORES
+
+=== IGUAL TRIPLO ===
+Serve para COMPARAR VALORES E TIPOS DE DADOS*/
+let a = "10";
+let b = 10;
+console.log(a === b);
