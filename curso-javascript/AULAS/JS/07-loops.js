@@ -29,6 +29,7 @@ while (i <= 3);
   */
 
 //EXEMPLO 3: LOOP FOR
-for( let i = 1; i <= 50; i++ ){
+/* for( let i = 1; i <= 50; i++ ){
     console.log(`I vale ${i}`);
 }
+ */
