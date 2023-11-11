@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvendo exercicio 4</title>
+</head>
+
+<style>
+    .box{
+        border: solid 1px blue;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <p id="texto"> </p>
+
+    <button class="box" id="vermelho"></button>
+    <button class="box"id="amarelo"></button>
+    <button class="box"id="roxo"></button>
+
+    <script>
+        const texto = document.querySelector("#texto");
+        const botaoVermelho = document.querySelector("#vermelho");
+        const botaoAmarelo = document.querySelector("#amarelo");
+        const botaoRoxo = document.querySelector("#roxo");
+
+        const pagina = document.querySelector("body");
+
+
+        botaoVermelho.addEventListener("click",function(){
+            texto.innerHTML = "VERMELHO";
+            pagina.style.background = "red";
+            pagina.style.transition = "3s";
+
+        });
+
+        botaoAmarelo.addEventListener("click",function(){
+            texto.innerHTML = "AMARELO";
+            pagina.style.background = "yellow";
+            pagina.style.transition = "3s";
+        });
+        botaoRoxo.addEventListener("click",function(){
+            texto.innerHTML = "ROXO";
+            pagina.style.background = "purple";
+            pagina.style.transition = "3s";
+        });
+    </script>
+    
+</body>
+</html>
