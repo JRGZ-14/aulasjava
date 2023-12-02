@@ -7,6 +7,10 @@
 <!-- SITE OFICIAL PLUGIN 
     https://lokeshdhakar.com/projects/lightbox2/ -->
 
+<link rel="stylesheet" href="lightbox/css/lightbox.min.css">
+
+
+
 <style>
     * { box-sizing: border-box; }
     html { font-size: 14px; }
@@ -32,12 +36,36 @@
         <hr>
         <p>Referência: <a href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox</a></p>
 
-        <!-- Estrutura da Galeria -->
-
-        
+        <!-- Estrutura da Galeria -->  
+        <div class="galeria">
+            <a href="imagens/apple.jpg" data-lightbox="fotos" data-title="Site Apple">
+                <img src="imagens/mini-apple.jpg" alt="">
+            </a>
+            <a href="imagens/ibm.jpg" data-lightbox="fotos" data-title="Site IBM">
+                <img src="imagens/mini-ibm.jpg" alt="">
+            </a>
+            <a href="imagens/microsoft.jpg" data-lightbox="fotos" data-title="Site Microsoft">
+                <img src="imagens/mini-microsoft.jpg" alt="">
+            </a>
+        </div> 
     </div>
 
 
+<!-- Importação da BIBLIOTECA JQUERY -->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+<!-- Importação da BIBLIOTECA JQUERY --> 
+    <script src="lightbox/js/lightbox.min.js"></script>
+
+
+    <script>
+        lightbox.option({
+            resizeDuration : 50,
+            wrapAround : true,
+            albumLabel : "Foto 1% de 2%"
+
+        });
+    </script>
 </body>
 
 </html>

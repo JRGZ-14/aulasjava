@@ -7,6 +7,11 @@
 
 
 <!-- SITE OFICIAL https://kenwheeler.github.io/slick/  --> 
+
+
+<link rel="stylesheet" href="slick/slick.css">
+<link rel="stylesheet" href="slick/slick-theme.css">
+
 <style>
 * { box-sizing: border-box;  }
 html { font-size: 14px; }
@@ -29,8 +34,26 @@ img { max-width: 100%; }
 .slider section { margin-bottom: 20px; }
 
 .slider h2, .slider p { margin: 0; }
+
+.voltar, .avancar{
+    position: absolute;
+    bottom: 100px;
+    background-color: rgb(200, 25, 5);
+    color: beige;
+    text-decoration: none;
+    z-index: 14;
+    
+}
+
+.voltar{left: 0;}
+
+.avancar{right: 0;}
+
+
 </style>
 </head>
+
+
 
 <body>
 
@@ -39,9 +62,54 @@ img { max-width: 100%; }
         <hr>
         <p>Referência: <a href="https://kenwheeler.github.io/slick/" target="_blank">Slick</a></p>
 
-        <!-- Estrutura do Slider/Carousel -->   
+
+       
+       
+        <!-- Estrutura do Slider/Carousel -->
+
+        <div class="slider">
+            <div>
+                <img src="imagens/dedos.jpg" alt="">
+                <h2>KKKKKKKKK</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minus ab debitis fugit sint.</p>
+
+            </div>
+
+            <div>
+                <img src="imagens/ideias.jpg" alt="">
+                <h2>IDEIAS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minus ab debitis fugit sint.</p>
+
+            </div>
+
+            <div>
+                <img src="imagens/pacoca.jpg" alt="">
+                <h2>PASSSOCAAN </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minus ab debitis fugit sint.</p>
+
+            </div>
+
+        </div>   <!-- fechamento do div.slider -->
         
-    </div>
+    </div> <!-- fechamento do div.container -->
+
+    <!-- Importação da BIBLIOTECA JQUERY -->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Importação da JS do Plugin Slick-->  
+    <script src="slick/slick.min.js"></script>
+
+    <script>
+        $('.slider').slick({
+            dots: true,
+            autoplay : true,
+            autoplaySpeed: 2000,
+          //  arrows: false,
+          prevArrow: "<a class='voltar'  href=''>Voltar  </a>",
+          nextArrow: "<a class='avancar' href=''>Avançar </a>" 
+        });
+
+    </script>
 
 
 </body>
